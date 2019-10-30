@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Slot_Machine" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bFP-5N-Et2">
+                                <rect key="frame" x="0.0" y="10" width="644" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mDU-Lw-EC9">
+                                        <rect key="frame" x="0.0" y="0.0" width="49.5" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MII-iR-dd5">
+                                        <rect key="frame" x="49.5" y="0.0" width="541.5" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Spin"/>
+                                        <connections>
+                                            <action selector="spinSlot:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dNe-Sd-gVW"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pWm-WL-0XN">
+                                        <rect key="frame" x="591" y="0.0" width="53" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="highlightedColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="qIa-Dz-Jtc"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="E7W-P4-pbt">
+                                <rect key="frame" x="0.0" y="60" width="667" height="315"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="strawhatLogo" translatesAutoresizingMaskIntoConstraints="NO" id="1wJ-zx-QhP">
+                                        <rect key="frame" x="0.0" y="0.0" width="222.5" height="315"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fruit" translatesAutoresizingMaskIntoConstraints="NO" id="xu9-0J-C5o">
+                                        <rect key="frame" x="222.5" y="0.0" width="222" height="315"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="worldGovernment" translatesAutoresizingMaskIntoConstraints="NO" id="wvG-9P-HuI">
+                                        <rect key="frame" x="444.5" y="0.0" width="222.5" height="315"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bFP-5N-Et2" firstAttribute="leading" secondItem="E7W-P4-pbt" secondAttribute="leading" id="0fe-6d-hqv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bFP-5N-Et2" secondAttribute="trailing" id="4Il-vt-j62"/>
+                            <constraint firstItem="E7W-P4-pbt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="SuF-h0-r9r"/>
+                            <constraint firstAttribute="trailing" secondItem="E7W-P4-pbt" secondAttribute="trailing" id="a74-1V-w9c"/>
+                            <constraint firstItem="E7W-P4-pbt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="fbv-mN-aWH"/>
+                            <constraint firstItem="bFP-5N-Et2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="lRa-sx-8w2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bFP-5N-Et2" secondAttribute="trailing" constant="23" id="moj-mh-tmd"/>
+                            <constraint firstAttribute="bottom" secondItem="E7W-P4-pbt" secondAttribute="bottom" id="vci-UH-4C9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageCenter" destination="xu9-0J-C5o" id="QFG-4b-ww6"/>
+                        <outlet property="imageLeft" destination="1wJ-zx-QhP" id="CTy-rH-KGk"/>
+                        <outlet property="imageRight" destination="wvG-9P-HuI" id="ibJ-Q3-AFX"/>
+                        <outlet property="scoreLabel" destination="mDU-Lw-EC9" id="3Rk-UM-zYA"/>
+                        <outlet property="timerLabel" destination="pWm-WL-0XN" id="ftw-FF-BQc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.39130434782609" y="133.59999999999999"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Fruit" width="466" height="521"/>
+        <image name="strawhatLogo" width="75.120002746582031" height="75.120002746582031"/>
+        <image name="worldGovernment" width="315" height="221.25"/>
+    </resources>
+</document>
